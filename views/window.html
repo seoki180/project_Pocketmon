@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your Pocketmon</title>
+</head>
+<script language = "javascript">
+	function random_img(){
+    num = Math.floor(Math.random()*5);//다섯개 이상의 파일을 출력하려면 5를 해당숫자로 수정.
+    document.randomImage.src="/data/"+num+".jpg";
+
+    }
+</script>
+<body>
+    <center>
+        <h3>당신의 포켓몬은</h3>
+        <img name = "randomImage" width="500px" height="500px">
+        <script>
+            random_img()
+        </script>
+        <p>입니다!</p>
+    </center>
+</body> 
+</html>
