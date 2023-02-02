@@ -13,10 +13,6 @@
 가져가기를 누른다면?????
 
 <img width="372" alt="image" src="https://user-images.githubusercontent.com/96401839/216385449-4ba03137-7ec9-4a0b-a6c1-6f6e097704dd.png">
-=메인 화면 들어가면~~
-
-
-
 짜잔~~ 당신의 포켓몬입니다~~~
 
 ### 개선사항
