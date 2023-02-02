@@ -8,15 +8,14 @@
 </head>
 <script language = "javascript">
 	function random_img(){
-    num = Math.floor(Math.random()*5);//다섯개 이상의 파일을 출력하려면 5를 해당숫자로 수정.
-    document.randomImage.src="/data/"+num+".jpg";
-
+    num = Math.floor(Math.random()*39);//다섯개 이상의 파일을 출력하려면 5를 해당숫자로 수정.
+    document.randomImage.src="/data/0"+num+".png";
     }
 </script>
 <body>
     <center>
         <h3>당신의 포켓몬은</h3>
-        <img name = "randomImage" width="500px" height="500px">
+        <img name = "randomImage" width="300px" height="300px">
         <script>
             random_img()
         </script>
