@@ -3,10 +3,9 @@
 ## 프로젝트 포켓몬
 
 아주 간단한 웹 공부 사이트 제작
+가져가기를 누르면 랜덤한 포켓몬 사진을 띄워 준다
 
-랜덤한 포켓몬 사진을 띄워 준다
-
-사용 tool Node.js, HTML, Ngork,
+사용 tool ) Node.js, HTML, Ngork, AWS(예정)
 
 ---
 <img width="566" alt="image" src="https://user-images.githubusercontent.com/96401839/216385396-9af7c201-c3c7-4a62-901a-c86a0a470349.png">
@@ -18,7 +17,7 @@
 ### 개선사항
 
 1. 다시 뽑기 버튼 추가
-2. EC2 찾아보기
+2. AWS 웹 서비스 띄우기
 3. 포켓몬 사진 더 추가
 4. 방문자수 카운트 추가
 5. GET, POST 구조 변경하기
