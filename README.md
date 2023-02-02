@@ -9,12 +9,11 @@
 사용 tool Node.js, HTML, Ngork,
 
 ---
-
+<img width="566" alt="image" src="https://user-images.githubusercontent.com/96401839/216385396-9af7c201-c3c7-4a62-901a-c86a0a470349.png">
 가져가기를 누른다면?????
 
-
-
-메인 화면 들어가면~~
+<img width="372" alt="image" src="https://user-images.githubusercontent.com/96401839/216385449-4ba03137-7ec9-4a0b-a6c1-6f6e097704dd.png">
+=메인 화면 들어가면~~
 
 
 
