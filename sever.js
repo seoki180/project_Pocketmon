@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const host = 3000;
+const host = 3000 || proecess.env.PORT;
+
 
 app.use(express.static("views"));
 
@@ -14,3 +15,5 @@ app.listen(host,function(){
     ===============
                 `)
 });
+
+
