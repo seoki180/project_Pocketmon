@@ -14,7 +14,7 @@
 <img width="372" alt="image" src="https://user-images.githubusercontent.com/96401839/216385449-4ba03137-7ec9-4a0b-a6c1-6f6e097704dd.png">
 짜잔~~ 당신의 포켓몬입니다~~~
 
-### 개선사항
+### 개선사항 Have To
 
 1. 다시 뽑기 버튼 추가
 2. AWS 웹 서비스 띄우기
@@ -23,3 +23,9 @@
 5. GET, POST 구조 변경하기
 6. 방명록 추가하기 DB 구조로
 7. 사진에 대응하는 이름 출력하기
+
+### Vesrsion 
+
+### Git 
+1. 모든 배포는 main에서 진행한다. main branch는 건드리지 않도록
+2. 기능을 추가하기 위한 작업은 develop에서 진행된다. 
