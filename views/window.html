@@ -6,28 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>your Pocketmon</title>
 </head>
-<script language = "javascript">
- 	function random_img(){
-    let num = Math.floor(Math.random()*39);//다섯개 이상의 파일을 출력하려면 5를 해당숫자로 수정.
-    document.randomImage.src="/data/0"+num+".png";
-    }
-    
-</script>
 <body>
     <center>
         <h3>당신의 포켓몬은</h3>
-        <img name = "randomImage" width="300px" height="300px">
-        <script>
-            random_img()
-        </script>
+        <img id = "Image" width="300px" height="300px">
         <p> 입니다!</p>
-
         <p>
-            <form action = "/guest_book">
-            <input type = "text" name = "guest_book" placeholder="방명록을 남겨주세요!"> 
-            <button type = "submit">제출하기</button>
-            </form>
+            <div>
+                <form action = "/guest_book">
+                <input type = "text" name = "guest_book" placeholder="방명록을 남겨주세요!"> 
+                <button type = "submit">제출하기</button>
+                </form>
+            </div>
         </p>
     </center>
+    
 </body> 
+    <script  type = "module" src = "random.js"></script>
 </html>
