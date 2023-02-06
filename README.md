@@ -7,7 +7,10 @@
 
 nodejs-express를 사용해 정적화면을 띄우고, Ngrok 터널링 기술을 통해 서버를 배포하였다. 다만 이는 로컬서버가동 문제로 AWS로 새로 배포할 예정이다.
 
-사용 tool ) Node.js, Ngork, AWS(예정)
+### 사용 tool 
+* [Node.js](https://nodejs.org/en/docs/)
+* [Ngrok](https://ngrok.com/docs)
+* [AWS / elasticbeans](https://docs.aws.amazon.com/ec2/index.html?nc2=h_ql_doc_ec2)
 
 ---
 <img width="566" alt="image" src="https://user-images.githubusercontent.com/96401839/216385396-9af7c201-c3c7-4a62-901a-c86a0a470349.png">
