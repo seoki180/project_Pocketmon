@@ -1,16 +1,17 @@
 const express = require("express");
 const handlebars = require("express-handlebars").create({defaultLayout : 'main'})
-const app = express();
 const getPocketmon = require("./lib/random")
 
+
+const app = express();
+
 app
-  .use(express.static(__dirname + '/public'))
+.use(express.static(__dirname + '/public'))
   .set('port', process.env.PORT || 3000)
 
 app
   .engine('handlebars',handlebars.engine)
   .set('view engine', 'handlebars')
-
 
 app
   .get("/",function(req,res){
