@@ -12,7 +12,30 @@
 .btn_retake{
     width: 300px;
     height: 30px;
-    background-color: crimson;
-    color:white;
+    background-color: #f03d33;
+    color:#ffffff;
     font-size: large;
+}
+
+.btn_take{
+    background-image: url('/img/monsterball.png');
+    background-color: transparent ;
+    background-size: 100px;
+    border: none;
+    width: 100px;
+    height: 100px;
+    float:left;
+
+}
+
+.input_guestbook{
+    width: 200px;
+    height: 30px;
+}
+
+.btn_guestbook{
+    background-image: url('/img/07.png');
+    background-size: 50px;
+    height: 35px;
+
 }

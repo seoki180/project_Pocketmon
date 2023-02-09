@@ -17,11 +17,12 @@ app.get("/",function(req,res){
 
 app.get('/take',async function(req,res){
   const data = await DB.getName()
-  console.log(data)
+  var name = data.name;
+  var src = data._id;
   res.render('take', {
     title : "your pocketmon",
-    pocketmonSrc : data.src,
-    pocketmonName : data.name
+    pocketmonSrc : src,
+    pocketmonName : name
   })  
 })
 
