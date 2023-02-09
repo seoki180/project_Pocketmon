@@ -28,9 +28,10 @@ app.get('/take',async function(req,res){
 app.post('/process/retake',function(req,res){
   res.redirect(302,'/take');
 })
+
 app.post('/process/guest_book',function(req,res){
   var content = (req.body.guest_book)
-  DB.query(`insert into guest_book(contents,date) VALUES('${content}',NOW())`)
+  DB.insertGusetBook(content)
   res.redirect(303,'/')
 })
 
