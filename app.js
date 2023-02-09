@@ -17,7 +17,7 @@ db.connect(function(err){
 
 app
 .use(express.static(__dirname + '/public'))
-  .set('port', process.env.PORT || 3000)
+  .set('port', process.env.PORT || 8080)
 
 app
   .engine('handlebars',handlebars.engine)
@@ -42,8 +42,10 @@ app
           pokcetmonName : dataList[0],
           title : "your Pocketmon",
           })
-    })
-
+      })
+  })
+  .get('/guest_book',function(req,res){
+    res.json("what")
   })
 
 
