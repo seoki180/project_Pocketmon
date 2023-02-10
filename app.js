@@ -17,8 +17,8 @@ app.get("/",function(req,res){
 
 app.get('/take',async function(req,res){
   const data = await DB.getName()
-  var name = data.name;
-  var src = data._id;
+  var name = data.name || "undefined";
+  var src = data._id || "undefined";
   res.render('take', {
     title : "your pocketmon",
     pocketmonSrc : src,
@@ -29,6 +29,7 @@ app.get('/take',async function(req,res){
 app.post('/process/retake',function(req,res){
   res.redirect(302,'/take');
 })
+
 app.post('/process/guest_book',function(req,res){
   var content = (req.body.guest_book)
   DB.insertGuestBook(content)

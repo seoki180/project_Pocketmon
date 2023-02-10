@@ -14,18 +14,19 @@
     height: 30px;
     background-color: #f03d33;
     color:#ffffff;
+    border-radius: 5px;
     font-size: large;
 }
 
 .btn_take{
-    background-image: url('/img/monsterball.png');
+    /* background-image: url('/img/monsterball.png');
     background-color: transparent ;
     background-size: 100px;
-    border: none;
-    width: 100px;
-    height: 100px;
-    float:left;
+    border: none; */
+    /* float:left; */
 
+    width: 100px;
+    height: 50px;
 }
 
 .input_guestbook{
@@ -34,8 +35,8 @@
 }
 
 .btn_guestbook{
-    background-image: url('/img/07.png');
     background-size: 50px;
+    background-color: black;
+    color : white;
     height: 35px;
-
 }
