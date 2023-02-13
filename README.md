@@ -34,6 +34,7 @@ nodejs-express 라이브러리를 활용해 프론트엔드를 구현했다. Exp
 
 ### 🌱 Vesrsion 
 v.1.0.0 : 가장 기초적인 내용만 구현했다. 메인 file은 app.js
+v.1.1.0 : 초기 목표로 한 기능을 구현했다. 다만 구조 개선이 필요해 보이며, react를 사용해 handlebar를 대체할 필요가 있어보인다.
 
 ### 🐱 Git convention
 1. 모든 배포는 main에서 진행한다. main branch는 건드리지 않도록
