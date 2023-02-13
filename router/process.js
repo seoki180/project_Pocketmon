@@ -2,7 +2,7 @@ const router = require("express").Router()
 const DB = require("../lib/db")
 
 router.post('/retake', function(req,res){
-    res.redirect('/page/take');
+    res.redirect('/');
 })
   
 router.post('/guest_book',function(req,res){
