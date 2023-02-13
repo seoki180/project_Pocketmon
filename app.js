@@ -1,13 +1,15 @@
 const express = require("express");
 const handlebars = require("express-handlebars").create({defaultLayout : 'main'})
-const app = express();
 const body_parser = require('body-parser')
 const DB = require('./lib/db')
 const processRouter = require('./router/process')
+const pageRouter = require('./router/page')
+const app = express();
+
 
 app
-  // .use(require('morgan')('dev'))
   .use(body_parser.urlencoded({ extended: true }))
+  .use(body_parser.json())
   .use(express.static(__dirname + '/public'))
   
 app
@@ -16,27 +18,20 @@ app
   
 app.engine('handlebars',handlebars.engine)
   
-app.get("/",function(req,res){
-  res.render('home' , {title : "Dr.Oh"})
+app.get("/",async function(req,res){
+  var counter = await DB.getCounter()
+  DB.upCount();
+  res.render('home' , 
+    { title : "Dr.Oh",
+      getCounter : counter })
 })
 
-app.get('/take',async function(req,res){
-  var data = await DB.getName()
-  var name = data.name;
-  var src = data.src;
-  res.render('take', {
-      title : "your pocketmon",
-      pocketmonSrc : src,
-      pocketmonName : name
-    }) 
-})
-
+app.use('/page',pageRouter)
 app.use('/process',processRouter)
 
 app.use(function(req,res){
   res.status(404).render('404')
 })
-
 
 app.listen(app.get('port'), function(){
   console.log(`open server at ` + app.get('port'))
