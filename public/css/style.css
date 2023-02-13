@@ -23,9 +23,11 @@
     background-image: linear-gradient(to top,white 50%, red 50%);
     font-weight: bold;
     font-size: 15px;
+    color : black;
     width: 100px;
     height: 50px;
     border-radius: 10%;
+    border-color: black;
 }
 
 .input_guestbook{

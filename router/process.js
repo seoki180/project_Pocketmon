@@ -1,11 +1,9 @@
 const router = require("express").Router()
 const DB = require("../lib/db")
 
-router.post('/retake',async function(req,res){
-    var post = req.body;
-    console.log(post)
-    res.redirect(303,'/');
-  })
+router.post('/retake', function(req,res){
+    res.redirect('/page/take');
+})
   
 router.post('/guest_book',function(req,res){
     var content = (req.body.guest_book)
