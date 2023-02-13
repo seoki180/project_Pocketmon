@@ -3,3 +3,40 @@
     height: 300px;
     border: 3;
 }
+
+.img_pocketmon{
+    width: 390px;
+    height: 390px;
+}
+
+.btn_retake{
+    width: 300px;
+    height: 30px;
+    background-color: #f03d33;
+    color:#ffffff;
+    border-radius: 5px;
+    font-size: large;
+}
+
+.btn_take{
+    /* background-image: url('/img/monsterball.png');
+    background-color: transparent ;
+    background-size: 100px;
+    border: none; */
+    /* float:left; */
+
+    width: 100px;
+    height: 50px;
+}
+
+.input_guestbook{
+    width: 200px;
+    height: 30px;
+}
+
+.btn_guestbook{
+    background-size: 50px;
+    background-color: black;
+    color : white;
+    height: 35px;
+}
