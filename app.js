@@ -6,7 +6,7 @@ const DB = require('./lib/db')
 const processRouter = require('./router/process')
 
 app
-  .use(require('morgan')('dev'))
+  // .use(require('morgan')('dev'))
   .use(body_parser.urlencoded({ extended: true }))
   .use(express.static(__dirname + '/public'))
   
@@ -21,11 +21,9 @@ app.get("/",function(req,res){
 })
 
 app.get('/take',async function(req,res){
-  var post = req.body;
-  console.log(post)
-  const data = await DB.getName()
-  var name = data.name || "undefined";
-  var src = data.src || "undefined";
+  var data = await DB.getName()
+  var name = data.name;
+  var src = data.src;
   res.render('take', {
       title : "your pocketmon",
       pocketmonSrc : src,
