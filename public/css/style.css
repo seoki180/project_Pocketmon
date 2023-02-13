@@ -19,14 +19,13 @@
 }
 
 .btn_take{
-    /* background-image: url('/img/monsterball.png');
-    background-color: transparent ;
-    background-size: 100px;
-    border: none; */
-    /* float:left; */
-
+    margin: 10px;
+    background-image: linear-gradient(to top,white 50%, red 50%);
+    font-weight: bold;
+    font-size: 15px;
     width: 100px;
     height: 50px;
+    border-radius: 10%;
 }
 
 .input_guestbook{

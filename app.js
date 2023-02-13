@@ -3,42 +3,42 @@ const handlebars = require("express-handlebars").create({defaultLayout : 'main'}
 const app = express();
 const body_parser = require('body-parser')
 const DB = require('./lib/db')
+const processRouter = require('./router/process')
 
 app
+  .use(require('morgan')('dev'))
   .use(body_parser.urlencoded({ extended: true }))
   .use(express.static(__dirname + '/public'))
+  
+app
   .set('port', process.env.PORT || 8080)
-  .engine('handlebars',handlebars.engine)
   .set('view engine', 'handlebars')
-
+  
+app.engine('handlebars',handlebars.engine)
+  
 app.get("/",function(req,res){
-    res.render('home' , {title : "Dr.Oh"})
-  })
+  res.render('home' , {title : "Dr.Oh"})
+})
 
 app.get('/take',async function(req,res){
+  var post = req.body;
+  console.log(post)
   const data = await DB.getName()
   var name = data.name || "undefined";
-  var src = data._id || "undefined";
+  var src = data.src || "undefined";
   res.render('take', {
-    title : "your pocketmon",
-    pocketmonSrc : src,
-    pocketmonName : name
-  })  
+      title : "your pocketmon",
+      pocketmonSrc : src,
+      pocketmonName : name
+    }) 
 })
 
-app.post('/process/retake',function(req,res){
-  res.redirect(302,'/take');
-})
-
-app.post('/process/guest_book',function(req,res){
-  var content = (req.body.guest_book)
-  DB.insertGuestBook(content)
-  res.redirect(303,'/')
-})
+app.use('/process',processRouter)
 
 app.use(function(req,res){
-  res.status(404).send("404 not found")
+  res.status(404).render('404')
 })
+
 
 app.listen(app.get('port'), function(){
   console.log(`open server at ` + app.get('port'))

@@ -1,19 +1,18 @@
-<center>
-    <h3>당신의 포켓몬은</h3>
-    <blockquote class = "img_pocketmon">
-        <img  src = "/img/0{{{pocketmonSrc}}}.png" >
-    </blockquote>
-    <p> {{{pocketmonName}}} 입니다!</p>
-        <p>
-            <div>
-                <form action = "/process/retake", method = 'post'>
-                <button type = "submit" class = "btn_retake">다시 뽑기!</button>
-                </form>
-            </div>
-            </p><div class = "form-group">
-                <form action = "/process/guest_book", method = "post">
-                <input class = "input_guestbook" type = "text" name = "guest_book" placeholder="방명록을 남겨주세요!"> 
-                <button class = "btn_guestbook" type = "submit">제출하기</button>
-                </form>
-            </div></p>
-</center>
+
+<h3>당신의 포켓몬은</h3>
+<blockquote class = "img_pocketmon">
+    <img  src = "{{{pocketmonSrc}}}" >
+</blockquote>
+<p> {{{pocketmonName}}} 입니다!</p>
+    <p>
+        <div>
+            <form action = "/process/retake", method = 'post'>
+            <button type = "submit" class = "btn_retake">다시 뽑기!</button>
+            </form>
+        </div>
+        </p><div class = "form-group">
+            <form action = "/process/guest_book", method = "post">
+            <input class = "input_guestbook" type = "text" name = "guest_book" placeholder="방명록을 남겨주세요!"> 
+            <button class = "btn_guestbook" type = "submit">제출하기</button>
+            </form>
+        </div></p>
