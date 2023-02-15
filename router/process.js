@@ -1,7 +1,7 @@
 const router = require("express").Router()
 const DB = require("../lib/db")
 
-router.post('/retake', function(req,res){
+router.post('/take', function(req,res){
     res.redirect(303,'/');
 })
   

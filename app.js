@@ -1,7 +1,7 @@
 const express = require("express");
 const handlebars = require("express-handlebars").create({defaultLayout : 'main'})
 const body_parser = require('body-parser')
-const DB = require('./lib/db')
+const indexRouter = require('./router/index')
 const processRouter = require('./router/process')
 const pageRouter = require('./router/page')
 const app = express();
@@ -17,19 +17,14 @@ app
   .set('view engine', 'handlebars')
   
 app.engine('handlebars',handlebars.engine)
-app.get("/",async function(req,res){
-  var counter = await DB.getCounter()
-  DB.upCount();
-  res.render('home' , 
-    { title : "Dr.Oh",
-      getCounter : counter })
-})
 
-app.use('/page',pageRouter)
-app.use('/process',processRouter)
+app
+  .use('/',indexRouter)
+  .use('/page',pageRouter)
+  .use('/process',processRouter)
+
 app.use(function(req,res){
   res.status(404).redirect('/page/404')
-
 })
 
 app.listen(app.get('PORT'), function(){
