@@ -15,7 +15,15 @@ router.get('/take',async function(req,res){
         title : "your pocketmon",
         pocketmonSrc : src,
         pocketmonName : name
-      }) 
-  })
+    }) 
+})
+router.get('/404',function(req,res){
+    res.render("404")
+})
+router.post('/404',function(req,res){
+    const s = req.body
+    console.log(s)
+    res.redirect('/')
+})
 
 module.exports = router;

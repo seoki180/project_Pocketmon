@@ -13,11 +13,10 @@ app
   .use(express.static(__dirname + '/public'))
   
 app
-  .set('port', process.env.PORT || 8080)
+  .set('PORT', process.env.PORT || 8080)
   .set('view engine', 'handlebars')
   
 app.engine('handlebars',handlebars.engine)
-  
 app.get("/",async function(req,res){
   var counter = await DB.getCounter()
   DB.upCount();
@@ -28,13 +27,13 @@ app.get("/",async function(req,res){
 
 app.use('/page',pageRouter)
 app.use('/process',processRouter)
-
 app.use(function(req,res){
-  res.status(404).render('404')
+  res.status(404).redirect('/page/404')
+
 })
 
-app.listen(app.get('port'), function(){
-  console.log(`open server at ` + app.get('port'))
+app.listen(app.get('PORT'), function(){
+  console.log(`open server at ` + app.get('PORT'))
   })
 
 
