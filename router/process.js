@@ -1,8 +1,8 @@
 const router = require("express").Router()
 const DB = require("../lib/db")
 
-router.post('/retake', function(req,res){
-    res.redirect('/page/take');
+router.post('/take', function(req,res){
+    res.redirect(303,'/');
 })
   
 router.post('/guest_book',function(req,res){

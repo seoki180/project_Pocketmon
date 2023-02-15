@@ -30,6 +30,16 @@
     border-color: black;
 }
 
+.form-group{
+    margin: 10px;
+}
+
+.lnk_git{
+    width: auto;
+    height: 50px;
+    margin-top: 100px;
+}
+
 .input_guestbook{
     width: 200px;
     height: 30px;
