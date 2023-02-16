@@ -18,6 +18,7 @@ app
   
 app.engine('handlebars',handlebars.engine)
 
+// router
 app
   .use('/',indexRouter)
   .use('/page',pageRouter)

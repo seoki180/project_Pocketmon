@@ -16,12 +16,15 @@ router.get("/",async function(req,res){
 router.post('/',async function(req,res){
     var ip = 
         req.headers['x-forwarded-for'] ||
-        req.connection.remoteAddress ||
-        req.socket.remoteAddress ||
-        req.connection.socket.remoteAddress;
+        req.ip 
+        // req.connection.remoteAddress ||
+        // req.socket.remoteAddress ||
+        // req.connection.socket.remoteAddress;
+
     var userAgent = req.headers['user-agent']
     await DB.insertUserList(ip,userAgent);
 
+    // console.log(req.headers)
     var id = RANDOM.getRandom();
     res.redirect('/page/'+id)
 })
