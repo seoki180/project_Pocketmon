@@ -1,10 +1,13 @@
 const router = require('express').Router()
+const { json } = require('body-parser')
 const DB = require('../lib/db')
 
 router.get("/thank",async function(req,res){
-    var one = await DB.showGuestBook()
+    var test = await DB.showGuestBook()
+    console.log(JSON.stringify(test))
     res.render("thank",{
-        content : one
+        content : test[0].contents,
+        date : test[0].date
     })
 })
 
@@ -33,8 +36,7 @@ router.get('/404',function(req,res){
 })
 
 router.post('/404',function(req,res){
-    const s = req.body
-    console.log(s)
+    console.log(req.body)
     res.redirect('/')
 })
 

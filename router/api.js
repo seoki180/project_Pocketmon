@@ -7,9 +7,16 @@ router.post('/take', function(req,res){
 
 router.post('/guest_book',function(req,res){
     var content = (req.body.guest_book)
-    // DB.insertGuestBook(content)
-    console.log(content)
-    res.redirect('/page/thank')
+
+    if(content === '')
+    {
+        console.log('empty content')
+        res.redirect('/')
+    }
+    else{
+        DB.insertGuestBook(content)
+        res.redirect('/page/thank')
+    }
 })
 
 
