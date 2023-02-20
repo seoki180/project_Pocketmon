@@ -7,7 +7,7 @@
 
 nodejs-express 라이브러리를 활용해 프론트엔드를 구현했다. Express- Handlebar를 활용해 데이터바인딩을 처리하고, 백엔드에서 MySQL과 연동해 데이터를 처리했다. 배포는 Ngrok 터널링 기술을 통해 활용했다. 차후 구글클라우드 혹은 AWS를 활용해 자동배포를 목적으로 하고 있다.
 
-###  🛠️ 사용 tool 
+###  🛠️ 사용 tools
 * [Node.js](https://nodejs.org/en/docs/)
     * [Express](https://expressjs.com/ko/)
     * [Express-Handlebars](https://www.npmjs.com/package/express-handlebars)
