@@ -17,7 +17,7 @@ nodejs-express 라이브러리를 활용해 프론트엔드를 구현했다. Exp
 
 ---
 <img width="566" alt="image" src="https://user-images.githubusercontent.com/96401839/216385396-9af7c201-c3c7-4a62-901a-c86a0a470349.png">
-가져가기를 누른다면??????
+가져가기를 누른다면?????
 
 <img width="372" alt="image" src="https://user-images.githubusercontent.com/96401839/216385449-4ba03137-7ec9-4a0b-a6c1-6f6e097704dd.png">
 짜잔~~ 당신의 포켓몬입니다~~~
