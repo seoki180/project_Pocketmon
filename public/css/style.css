@@ -31,7 +31,7 @@
 }
 
 .form-group{
-    margin: 10px;
+    margin: 20px;
 }
 
 .lnk_git{
@@ -55,6 +55,4 @@
 .table_guestBook{
     overflow: scroll;
     color : black;
-    height: 500px;
-    width: 500px;
 }
