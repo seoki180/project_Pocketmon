@@ -10,7 +10,7 @@
 }
 
 .btn_retake{
-    width: 300px;
+    width: 200px;
     height: 30px;
     background-color: #f03d33;
     color:#ffffff;
@@ -55,4 +55,24 @@
 .table_guestBook{
     overflow: scroll;
     color : black;
+}
+
+.btn_monsterball{
+    background:none;
+    border: none;
+    width: 80px;
+    height: 80px;
+    margin-right: 40px;
+}
+
+.group_monsterball{
+    margin: 50px;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.img_monsterball{
+    width: 59px;
+    height: 59px;
 }

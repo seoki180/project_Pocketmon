@@ -3,14 +3,40 @@
     <h2>혼자 돌아다니기엔 위험하단다.</h2>
     <h2>너의 포켓몬을 가져가렴!</h2>
 </div>
-<img class = "img_doctor" src = "/img/doctor.jpg">
-<p>
-    <div style="margin-top: 30px;">
-        <h3>지금까지 {{getCounter}} 명의 트레이너가 가져갔단다</h3>
-    </div>
+
+<img id = "doctor" class = "img_doctor" src = "/img/doctor.jpg">
+
+{{!-- <p>
     <div>
         <form method="post">
             <button class = "btn_take" type="submit">가져가기!</button>
         </form>  
     </div>
+</p> --}}
+
+    <div class = "group_monsterball">
+        <form method = "post">
+            <button class ="btn_monsterball" type = "submit"><img class = "img_monsterball" src = "/img/monsterball.png"></button>
+        </form>
+
+        <form method = "post">
+            <button class ="btn_monsterball" type = "submit"><img class = "img_monsterball" src = "/img/monsterball.png"></button>
+        </form>
+
+        <form method = "post">
+            <button class ="btn_monsterball" type = "submit"><img class = "img_monsterball" src = "/img/monsterball.png"></button>
+        </form>
+    </div>
+
+<p>
+    <div style="margin-top: 30px;">
+        <h3>지금까지 {{getCounter}} 명의 트레이너가 가져갔단다</h3>
+    </div>
 </p>
+
+<script>
+    const img = document.querySelector("#doctor")
+    img.addEventListener("click", () => {
+        alert("이잉~~ 난 포켓몬이 아니야~~🙈")
+    })
+</script>
