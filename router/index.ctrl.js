@@ -29,17 +29,12 @@ const page = {
 
      thank : async(req,res) => {
         var test = await DB.showGuestBook()
-    // console.log(JSON.stringify(test))
+        
+
         res.render("thank",{
             content : test[0].contents,
             name : test[0].name,
-            date : test[0].date.toLocaleString(),
-            content2 : test[1].contents,
-            name2 : test[1].name,
-            date2 : test[1].date.toLocaleString(),
-            content3 : test[2].contents,
-            name3 : test[2].name,
-            date3 : test[2].date.toLocaleString(),
+            date : test[0].date.toLocaleString()
         })
      },
 
@@ -50,9 +45,8 @@ const page = {
 
 const process = {
     home : async(req,res) => {
-        var ip = 
-        req.headers['x-forwarded-for'] ||
-        req.ip 
+        let ip = req.headers['x-forwarded-for'] || req.ip
+
         // req.connection.remoteAddress ||
         // req.socket.remoteAddress ||
         // req.connection.socket.remoteAddress;
@@ -65,7 +59,7 @@ const process = {
 
     NotFound : (req,res) => {
         console.log(req.body)
-        res.redirect('/')
+
     },
 
     takeHome : (req,res) => {

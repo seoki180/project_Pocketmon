@@ -1,3 +1,25 @@
+<script>
+    function popOpen() {
+        let modalPop = document.getElementById("modal-wrap");
+        let modalBg = document.getElementById("modal-bg")
+
+        modalBg.style.display = "block"
+        modalPop.style.display = "block"
+
+}
+</script>
+
+
+<script>
+    function popClose() {
+        let modalPop = document.getElementById("modal-wrap");
+        let modalBg = document.getElementById("modal-bg")
+
+        modalBg.style.display = "none"
+        modalPop.style.display = "none"
+
+}
+</script>
 
 <h3>당신의 포켓몬은</h3>
     <blockquote class = "img_pocketmon">
@@ -17,5 +39,24 @@
         <p><button class = "btn_guestbook">제출하기</button>
         </form>
     </div>
+
+    <button onclick="popOpen()">버튼</button>
+
 <A href = "https://github.com/seoki180/project_Pocketmon/"><img class="lnk_git" src = "/img/github.png"></A>
 
+
+
+<div id = "modal-bg" class="modal-bg" onClick="javascript:popClose();"></div>
+    <div id = "modal-wrap" class="modal-wrap">
+
+        <form action = "/thank">
+            <button>방명록 보라거기!</button>
+        </form>
+        <div>
+            <p>인스타에 올리기!</p>
+            <A herf = "https://github.com/seoki180/project_Pocketmon"/><img class = "lnk_insta" src = "/img/insta.png"></A>
+        </div>
+    </div>
+</div>
+
+        
