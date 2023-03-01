@@ -1,10 +1,12 @@
 const express = require("express");
 const handlebars = require("express-handlebars").create({defaultLayout : 'main'})
+const dotenv = require("dotenv")
 const body_parser = require('body-parser')
 const homeRouter = require('./router/home')
 const apiRouter = require('./router/api')
 const pageRouter = require('./router/page')
 const app = express();
+dotenv.config()
 
 app
   .use(body_parser.urlencoded({ extended: true }))
