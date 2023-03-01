@@ -28,14 +28,9 @@ const page = {
      },
 
      thank : async(req,res) => {
-        var test = await DB.showGuestBook()
+        // var test = await DB.showGuestBook()
         
-
-        res.render("thank",{
-            content : test[0].content,
-            name : test[0].name,
-            date : test[0].date.toLocaleString()
-        })
+        res.render("thank")
      },
 
      NotFound : (req,res) => {
@@ -74,6 +69,11 @@ const process = {
         else{
             DB.insertGuestBook(content)
         }
+    },
+
+    thank : async (req,res) => {
+        const GB = await DB.showGuestBook()
+        res.json(GB)
     }
 }
 

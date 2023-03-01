@@ -1,10 +1,38 @@
+
 <div>
-    
     <h1>감사합니다!</h1>
-    <div id = "parent" class = "parentElement">
-        {{content}}
-        {{name}}
-        {{date}}
+    <div>
+        <ul id = "list">
+        </ul>
     </div>
 
 </div>
+
+
+{{!-- <script defer src = "../lib/getGuestBook.js"></script> --}}
+<script>
+    let guestBook = {}
+    fetch('/api/thank')
+        .then((res) => res.json())
+        .then((data) => {
+            guestBook = data
+            const list = document.getElementById("list")
+            function showList(val) {
+                list.innerHTML = ''
+                const res = guestBook.forEach(guestBook => {
+                    const li = document.createElement('li')
+                    li.innerHTML = `
+                        <p>${guestBook.name}</p>
+                        <p>${guestBook.content}</p>
+                        <p>${guestBook.date}</p>
+                        <hr>
+                    `
+                    list.appendChild(li)
+                })
+            }
+            showList() 
+        })
+
+
+
+</script>
