@@ -69,16 +69,13 @@ const process = {
     takeGuestBook : (req,res) => {
         console.log(req.body)
         const content = (req.body.guest_contents)
-        const name = req.body.guest_name
 
         if(content === '')
         {
             console.log('empty content')
-            res.redirect('/')
         }
         else{
-            DB.insertGuestBook(content,name)
-            res.redirect('/page/thank')
+            DB.insertGuestBook(content)
         }
     }
 }
