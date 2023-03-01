@@ -32,7 +32,7 @@ const page = {
         
 
         res.render("thank",{
-            content : test[0].contents,
+            content : test[0].content,
             name : test[0].name,
             date : test[0].date.toLocaleString()
         })
@@ -47,9 +47,6 @@ const process = {
     home : async(req,res) => {
         let ip = req.headers['x-forwarded-for'] || req.ip
 
-        // req.connection.remoteAddress ||
-        // req.socket.remoteAddress ||
-        // req.connection.socket.remoteAddress;
         var userAgent = req.headers['user-agent']
         await DB.insertUserList(ip,userAgent);
 
