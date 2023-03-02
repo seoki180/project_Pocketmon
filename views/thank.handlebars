@@ -1,15 +1,16 @@
 
 <div>
-    <h1>감사합니다!</h1>
+    <h1 style = "margin-bottom : 30px">지금까지 다녀간 트레이너란다</h1>
+
     <div>
-        <ul id = "list">
+        <ul id = "list" class = "div_guestBook">
         </ul>
     </div>
 
 </div>
 
 
-{{!-- <script defer src = "../lib/getGuestBook.js"></script> --}}
+
 <script>
     let guestBook = {}
     fetch('/api/thank')
@@ -22,9 +23,9 @@
                 const res = guestBook.forEach(guestBook => {
                     const li = document.createElement('li')
                     li.innerHTML = `
-                        <p>${guestBook.name}</p>
-                        <p>${guestBook.content}</p>
-                        <p>${guestBook.date}</p>
+                        <span class = "name_guestBook">${guestBook.name}</span>
+                        <span class = "date_guestBook">${guestBook.date}</span>
+                        <div class = "content_guestBook">${guestBook.content}</div>
                         <hr>
                     `
                     list.appendChild(li)
@@ -32,7 +33,5 @@
             }
             showList() 
         })
-
-
 
 </script>

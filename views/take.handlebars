@@ -14,6 +14,10 @@
         modalBg.style.display = "none"
         modalPop.style.display = "none"
     }
+    function showBtn(){
+        let btnHidden = document.getElementById("btn_hidden")
+        btnHidden.style.display = "block"
+    }
 </script>
 
 
@@ -29,10 +33,15 @@
     </div>
 
     <div class = "form_take">
-        <form action = "/api/guest_book", method = "post">
+        <form method = "post">
         <input class = "input_guestbook" type = "text" name = "guest_contents" placeholder="방명록을 남겨주세요!"> 
-        <p><button class = "btn_guestbook" onclick="popOpen()">제출하기</button>
+        <p><button class = "btn_guestbook" onclick="popOpen();showBtn()">제출하기</button>
         </form>
+
+        <form action="/page/thank">
+        </form>
+
+            <button id = "btn_hidden" class = "btn_guestbook_hidden">방명록보러가기</button></p>
     </div>
 
 
@@ -40,19 +49,21 @@
 <A href = "https://github.com/seoki180/project_Pocketmon/"><img class="lnk_git" src = "/img/github.png"></A>
 
 {{!-- 모달창영역 --}}
-<div id = "modal-bg" class="modal-bg" onClick="popClose()"></div>
+<div id = "modal-bg" class="modal-bg" onclick="popClose()"></div>
     <div id = "modal-wrap" class="modal-wrap">
-        <div>
-            <form action = "/page/thank">
-                <button>방명록 보러가기!!</button>
-            </form>
-        </div>
-
+        <P>나온 포켓몬을 찍어서 인스타에 올리시면 상품을 드려요~~~</P>
         <div>
             <p>인스타에 올리기!</p>
             <a href = "https://www.instagram.com/seokhi_seo/"/><img class = "lnk_insta" src = "/img/insta.png"></a>
         </div>
+        <div>
+            <form class = "btn_thank_1"action = "/page/thank">
+                <button>방명록 보러가기!!</button>
+            </form>
+            <form class = "btn_thank_2"action = "/">
+                <button>맨 처음으로 가기!</button>
+            </form>
+        </div>
     </div>
 </div>
 
-        

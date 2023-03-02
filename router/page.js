@@ -1,3 +1,4 @@
+const db = require("../lib/db")
 const ctrl = require("./index.ctrl")
 const router = require('express').Router()
 
@@ -6,6 +7,17 @@ const router = require('express').Router()
 router.get("/thank",ctrl.page.thank)
 // 포켓몬 사진을 띄우는 페이지
 router.get('/:id',ctrl.page.take)
+router.post('/:id',async (req,res) => {
+    const content = req.body.guest_contents;
+    const recieved = req.params.id
+    if(content !== ''){
+        db.insertGuestBook(content,recieved)
+        db.updateReferNum(recieved)
+        const data = await db.getUserName(recieved)
+        console.log(data)
+        db.updateUserName(data)
+    }
+})
 
 
 
@@ -15,4 +27,4 @@ router.post('/404',ctrl.process.NotFound)
 
 
 
-module.exports = router;
+module.exports = router;    
