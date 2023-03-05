@@ -1,4 +1,4 @@
-const db = require("../lib/db")
+const db = require("../lib/database")
 const ctrl = require("./index.ctrl")
 const router = require('express').Router()
 

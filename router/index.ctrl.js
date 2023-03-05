@@ -1,4 +1,5 @@
-const DB = require("../lib/db")
+
+const DB = require("../lib/database")
 const RANDOM = require('../lib/random')
 
 
@@ -14,17 +15,12 @@ const page = {
      
      take : async(req,res) => {
         var data = await DB.getName(req.url.replace('/',''))
-        if(data !== undefined){
-            res.render('take', 
-            {
-                title : "your pocketmon",
-                pocketmonSrc : data.src,
-                pocketmonName : data.name
-            }) 
-        }
-        else{
-            res.redirect("/")
-        }
+        res.render('take', 
+        {
+            title : "your pocketmon",
+            pocketmonSrc : data.src,
+            pocketmonName : data.name
+        })         
      },
 
      thank : async(req,res) => {
@@ -58,18 +54,6 @@ const process = {
         res.redirect(303,'/')
     },
 
-    takeGuestBook : (req,res) => {
-        console.log(req.body)
-        const content = (req.body.guest_contents)
-
-        if(content === '')
-        {
-            console.log('empty content')
-        }
-        else{
-            DB.insertGuestBook(content)
-        }
-    },
 
     thank : async (req,res) => {
         const GB = await DB.showGuestBook()
