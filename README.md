@@ -14,6 +14,7 @@ nodejs-express 라이브러리를 활용해 프론트엔드를 구현했다. Exp
     * [MySQL](https://www.mysql.com/)
 * [Ngrok](https://ngrok.com/docs)
 * [AWS / elasticbeans](https://docs.aws.amazon.com/ec2/index.html?nc2=h_ql_doc_ec2)
+* [AWS / RDS](https://ap-northeast-2.console.aws.amazon.com/rds/home?region=ap-northeast-2)
 
 ---
 <img width="566" alt="image" src="https://user-images.githubusercontent.com/96401839/216385396-9af7c201-c3c7-4a62-901a-c86a0a470349.png">
