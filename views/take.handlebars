@@ -1,4 +1,4 @@
-<script>
+{{!-- <script>
     function popOpen() {
         let modalPop = document.getElementById("modal-wrap");
         let modalBg = document.getElementById("modal-bg")
@@ -18,7 +18,7 @@
         let btnHidden = document.getElementById("btn_hidden")
         btnHidden.style.display = "block"
     }
-</script>
+</script> --}}
 
 
 <h3>당신의 포켓몬은</h3>
@@ -34,21 +34,19 @@
 
     <div class = "form_take">
         <form method = "post">
-        <input class = "input_guestbook" type = "text" name = "guest_contents" placeholder="방명록을 남겨주세요!"> 
-        <p><button class = "btn_guestbook" onclick="popOpen();showBtn()">제출하기</button>
+            <input class = "input_guestbook" type = "text" name = "guest_contents" placeholder="방명록을 남겨주세요!"> 
+            <p><button class = "btn_guestbook">제출하기</button>
         </form>
 
-        <form action="/page/thank">
-        </form>
-
-            <button id = "btn_hidden" class = "btn_guestbook_hidden">방명록보러가기</button></p>
+            {{!-- <button id = "btn_hidden" class = "btn_guestbook_hidden">방명록보러가기</button></p> --}}
     </div>
 
 
 
+<A href = "https://github.com/seoki180/project_Pocketmon/"><img class="lnk_git" src = "/img/insta.png"></A>
 <A href = "https://github.com/seoki180/project_Pocketmon/"><img class="lnk_git" src = "/img/github.png"></A>
 
-{{!-- 모달창영역 --}}
+{{!-- 모달창영역
 <div id = "modal-bg" class="modal-bg" onclick="popClose()"></div>
     <div id = "modal-wrap" class="modal-wrap">
         <P>나온 포켓몬을 찍어서 인스타에 올리시면 상품을 드려요~~~</P>
@@ -66,4 +64,4 @@
         </div>
     </div>
 </div>
-
+--}}
