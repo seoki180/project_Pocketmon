@@ -18,8 +18,8 @@ const page = {
         res.render('take', 
         {
             title : "your pocketmon",
-            pocketmonSrc : data.src,
-            pocketmonName : data.name
+            pocketmonSrc : data?.src,
+            pocketmonName : data?.name
         })         
      },
 

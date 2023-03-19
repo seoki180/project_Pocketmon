@@ -17,7 +17,6 @@ router.post('/:id',async (req,res) => {
         console.log(data)
         db.updateUserName(data)
     }
-    res.redirect("/page/thank")
 })
 
 

@@ -23,7 +23,7 @@
 
 <h3>당신의 포켓몬은</h3>
     <div class = "img_pocketmon">
-        <img src = {{{pocketmonSrc}}}>
+        <img class = "img_pocketmon" src = {{{pocketmonSrc}}}>
     </div>
 <p> {{{pocketmonName}}} 입니다!</p>
     <div>
@@ -34,17 +34,35 @@
 
     <div class = "form_take">
         <form method = "post">
-            <input class = "input_guestbook" type = "text" name = "guest_contents" placeholder="방명록을 남겨주세요!"> 
-            <p><button class = "btn_guestbook">제출하기</button>
+            <input id = "form_input" class = "input_guestbook" type = "text" name = "guest_contents" placeholder="방명록을 남겨주세요!"> 
+            <button id = "form_button" class = "btn_submit" onclick= "hideInput()">제출하기</button>
         </form>
+    </div>
 
-            {{!-- <button id = "btn_hidden" class = "btn_guestbook_hidden">방명록보러가기</button></p> --}}
+    <p></p>
+    <div class = "div1">
+        <form action = "/page/thank">
+            <button class = "btn_submit">방명록보러가기</button>
+        </form>
+        <button class ="btn_submit" onclick = "location.href='https://www.instagram.com/'">인스타로</button>
     </div>
 
 
 
-<A href = "https://github.com/seoki180/project_Pocketmon/"><img class="lnk_git" src = "/img/insta.png"></A>
+
+
 <A href = "https://github.com/seoki180/project_Pocketmon/"><img class="lnk_git" src = "/img/github.png"></A>
+
+
+<script>
+    const input = document.getElementById("form_input")
+    const button = document.getElementById("form_button")
+
+    function hideInput(){
+        input.style.display = "none"
+        button.style.display = "none"
+    }
+</script>
 
 {{!-- 모달창영역
 <div id = "modal-bg" class="modal-bg" onclick="popClose()"></div>
