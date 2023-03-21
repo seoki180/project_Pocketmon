@@ -9,7 +9,7 @@
 
 nodejs-express 라이브러리를 활용해 프론트엔드를 구현했다. Express-Handlebar 템플릿 엔진을 사용하였으며, 백엔드에서 MySQL과 연동해 데이터를 처리하였다. 배포는 AWS EC2 클라우드 컴퓨팅을 활용하였다.
 
-### 🛠️ 사용 tool
+### 🛠️ 사용 tools
 
 * [Node.js](https://nodejs.org/en/docs/)
   * [Express](https://expressjs.com/ko/)
@@ -43,6 +43,7 @@ nodejs-express 라이브러리를 활용해 프론트엔드를 구현했다. Exp
 ### 🌱 Vesrsion
 
 v.1.0.0 : 가장 기초적인 내용만 구현했다. 메인 file은 app.js
+
 
 ### 🐱 Git convention
 
