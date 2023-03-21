@@ -35,7 +35,7 @@
     <div class = "form_take">
         <form method = "post">
             <input id = "form_input" class = "input_guestbook" type = "text" name = "guest_contents" placeholder="방명록을 남겨주세요!"> 
-            <button id = "form_button" class = "btn_submit" onclick= "hideInput()">제출하기</button>
+            <button id = "form_button" class = "btn_submit" >제출하기</button>
         </form>
     </div>
 
@@ -44,11 +44,8 @@
         <form action = "/page/thank">
             <button class = "btn_submit">방명록보러가기</button>
         </form>
-        <button class ="btn_submit" onclick = "location.href='https://www.instagram.com/'">인스타로</button>
+        <button class ="btn_submit" onclick = "location.href='https://www.instagram.com/dr.oh_02/?igshid=YmMyMTA2M2Y%3D'">인스타로</button>
     </div>
-
-
-
 
 
 <A href = "https://github.com/seoki180/project_Pocketmon/"><img class="lnk_git" src = "/img/github.png"></A>
@@ -58,10 +55,17 @@
     const input = document.getElementById("form_input")
     const button = document.getElementById("form_button")
 
-    function hideInput(){
-        input.style.display = "none"
-        button.style.display = "none"
-    }
+
+    button.addEventListener("click",()=>{
+        alert("왜 다들 포켓몬을 보고 스토리를 올리는지 모르겠어 💦💦💦")
+        input.style.display ="none"
+        button.style.display ="none"
+    })
+    //function hideInput(){
+    //    input.style.display = "none"
+    //    button.style.display = "none"
+//
+    //}
 </script>
 
 {{!-- 모달창영역
