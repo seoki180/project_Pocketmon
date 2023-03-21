@@ -5,14 +5,14 @@
         font-weight: bold;
         background-color: black;
         color: white;
+        margin-bottom: 10px;
     }
 </style>
 
 <div>
     <h1 style = "margin-bottom : 30px">지금까지 다녀간 트레이너란다</h1>
-    <form  action = "/">
-        <button class = "btn_toHome">홈으로 돌아가기</button>
-    </form>
+    <button class = "btn_toHome" onclick = "javascript:history.back()">뒤로 돌아가기</button>
+
 
     <div>
         <ul id = "list" class = "div_guestBook">
